@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinexa Formation | Dr Christophe Delong</title>
+    <meta name="description" content="Expertise en neuro-rééducation et IA. Formations dirigées par le Dr Christophe Delong.">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #0056b3;
+            --text: #333;
+            --light-bg: #f8f9fa;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            background: #fff;
+        }
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            background: #fff;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Section Vu dans les Médias */
+        .media-bar {
+            background: var(--light-bg);
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .media-bar span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+        }
+        .logos img { height: 30px; }
+
+        /* Section Bio & Wikipedia */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 60px 0;
+        }
+        .hero-img {
+            flex: 1;
+            max-width: 300px;
+            border-radius: 8px;
+        }
+        .hero-text { flex: 2; }
+        .badge-wiki {
+            display: inline-block;
+            background: #eee;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Section Livre & Ebook */
+        .content-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid var(--accent);
+            padding-left: 20px;
+            margin: 40px 0;
+            font-size: 1.2rem;
+        }
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>KINEXA FORMATION</h1>
+    <p>L'excellence médicale au service de l'intelligence artificielle</p>
+</header>
+
+<div class="media-bar">
+    <div class="container">
+        <span>Vu dans les médias</span>
+        <div class="logos">
+            <strong>Santé Magazine</strong>
+            <strong>Notre Temps</strong>
+            <strong>LaSantéSurTout.com</strong>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <img src="https://via.placeholder.com/300x400" alt="Dr Christophe Delong" class="hero-img">
+        <div class="hero-text">
+            <a href="https://fr.wikipedia.org/wiki/Christophe_Delong" target="_blank" class="badge-wiki">↗ Référencé sur Wikipedia</a>
+            <h2>Dr Christophe Delong</h2>
+            <p><strong>Médecin spécialiste, ancien praticien hospitalier (AP-HP).</strong></p>
+            <p>Expert reconnu en médecine physique et de réadaptation, le Dr Delong dirige l'architecture clinique de <strong>Kinexa</strong>. Ses travaux intègrent la boucle neuromotrice au cœur de l'innovation IA pour restaurer l'harmonie du geste.</p>
+        </div>
+    </section>
+
+    <blockquote>
+        "Le mouvement n'est pas une simple mécanique, c'est une symphonie neurologique que l'IA nous permet aujourd'hui de décoder avec une précision inédite."
+    </blockquote>
+
+    <div class="content-split">
+        <div class="card">
+            <h3>L'Ouvrage de Référence</h3>
+            <p>Retrouvez les fondements cliniques dans mon ouvrage publié chez <strong>Flammarion</strong>.</p>
+            <p><em>Une base doctrinale pour les professionnels de santé exigeants.</em></p>
+            <a href="#" class="btn">Consulter le livre</a>
+        </div>
+
+        <div class="card">
+            <h3>Guide Gratuit : IA & Neuroplasticité</h3>
+            <p>Téléchargez notre dernier Ebook pour comprendre l'impact des protocoles Kinexa sur la rééducation moderne.</p>
+            <form>
+                <input type="email" placeholder="Votre email professionnel" style="width:100%; padding:10px; margin-top:10px; border:1px solid #ddd; border-radius:4px;">
+                <button type="submit" class="btn" style="width:100%; border:none; cursor:pointer;">Recevoir l'Ebook</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Kinexa.ai - Biohacking & Neurosciences. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
