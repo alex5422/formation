@@ -1,176 +1,113 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinexa Formation | Dr Christophe Delong</title>
-    <meta name="description" content="Expertise en neuro-rééducation et IA. Formations dirigées par le Dr Christophe Delong.">
+    <title>Kinexa Formation | Neuro-Performance Corporate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #1a1a1a;
-            --accent: #0056b3;
-            --text: #333;
-            --light-bg: #f8f9fa;
-        }
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            margin: 0;
-            padding: 0;
-            background: #fff;
-        }
-        header {
-            padding: 40px 20px;
-            text-align: center;
-            background: #fff;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        /* Section Vu dans les Médias */
-        .media-bar {
-            background: var(--light-bg);
-            padding: 20px 0;
-            text-align: center;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-        }
-        .media-bar span {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #888;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .logos {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            filter: grayscale(100%);
-            opacity: 0.7;
-        }
-        .logos img { height: 30px; }
+        :root { --dark: #0f172a; --accent: #f59e0b; --blue-light: #3b82f6; --bg: #ffffff; }
+        body { font-family: 'Inter', sans-serif; margin: 0; color: #1e293b; background: var(--bg); line-height: 1.6; }
+        
+        /* Nav & Authority Bar */
+        .auth-nav { background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 10px 0; font-size: 0.8rem; text-align: center; }
+        .auth-nav a, .auth-nav span { margin: 0 15px; color: #64748b; text-decoration: none; font-weight: 600; }
+        header { background: var(--dark); padding: 20px; display: flex; justify-content: space-between; align-items: center; }
 
-        /* Section Bio & Wikipedia */
-        .hero {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            padding: 60px 0;
-        }
-        .hero-img {
-            flex: 1;
-            max-width: 300px;
-            border-radius: 8px;
-        }
-        .hero-text { flex: 2; }
-        .badge-wiki {
-            display: inline-block;
-            background: #eee;
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            text-decoration: none;
-            color: #333;
-            margin-bottom: 15px;
-        }
+        /* Hero Section (Capture 1) */
+        .hero { background: linear-gradient(rgba(15,23,42,0.9), rgba(15,23,42,0.9)), url('fond-neuro.jpg'); 
+                background-size: cover; color: white; padding: 100px 20px; text-align: center; }
+        .hero h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; max-width: 800px; margin: 0 auto 20px; }
+        .hero h1 span { color: var(--accent); }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; opacity: 0.9; }
 
-        /* Section Livre & Ebook */
-        .content-split {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 40px;
-        }
-        .card {
-            background: var(--light-bg);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #eee;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        blockquote {
-            font-style: italic;
-            border-left: 4px solid var(--accent);
-            padding-left: 20px;
-            margin: 40px 0;
-            font-size: 1.2rem;
-        }
-        footer {
-            padding: 60px 20px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #888;
-        }
+        /* Section Expert (Capture 8 + Autorité) */
+        .expert-section { padding: 80px 20px; text-align: center; background: #fff; }
+        .expert-card { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 40px auto; text-align: left; }
+        .badge-wiki { background: #e2e8f0; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; text-decoration: none; color: var(--dark); }
+
+        /* Grid Services (Capture 7) */
+        .services { padding: 80px 20px; background: #f8fafc; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+        .card { background: white; padding: 40px; border-radius: 16px; border: 1px solid #e2e8f0; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .card h3 { color: var(--dark); margin-top: 0; }
+        .btn-gold { background: var(--accent); color: var(--dark); padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; }
+
+        /* Contact (Capture 10) */
+        .contact { background: var(--dark); color: white; padding: 80px 20px; text-align: center; }
+        
+        /* Footer & NDA */
+        footer { padding: 40px; text-align: center; border-top: 1px solid #eee; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
+<div class="auth-nav">
+    <a href="https://fr.wikipedia.org/wiki/Christophe_Delong" target="_blank">↗ MÉDECIN RÉFÉRENCÉ SUR WIKIPEDIA</a>
+    <span>PUBLIÉ CHEZ FLAMMARION</span>
+    <span>NDA FORMATION : 11 75 74061 75</span>
+</div>
+
 <header>
-    <h1>KINEXA FORMATION</h1>
-    <p>L'excellence médicale au service de l'intelligence artificielle</p>
+    <div style="color:white; font-weight:900; font-size:1.5rem;">KINEXA <span style="color:var(--accent)">FORMATION</span></div>
+    <a href="#contact" class="btn-gold">Réserver</a>
 </header>
 
-<div class="media-bar">
-    <div class="container">
-        <span>Vu dans les médias</span>
-        <div class="logos">
-            <strong>Santé Magazine</strong>
-            <strong>Notre Temps</strong>
-            <strong>LaSantéSurTout.com</strong>
+<section class="hero">
+    <h1>L'IA accélère la cadence, <span>votre corps doit suivre.</span></h1>
+    <p>Développez une résilience cognitive d'élite pour maîtriser l'hyper-sollicitation et prévenir la fatigue décisionnelle.</p>
+    <div style="display:flex; justify-content:center; gap:20px;">
+        <a href="#contact" class="btn-gold">Réserver une Masterclass</a>
+        <a href="#" style="color:white; border:1px solid white; padding:12px 25px; border-radius:8px; text-decoration:none;">Nos Programmes</a>
+    </div>
+</section>
+
+<section class="expert-section">
+    <p style="text-transform:uppercase; letter-spacing:2px; font-weight:bold; color:var(--blue-light)">Notre Expert Scientifique</p>
+    <h2>Dr. Christophe Delong</h2>
+    <div class="expert-card">
+        <div style="background:var(--f8fafc); padding:30px; border-radius:12px;">
+            <h3>Chef de Service à l'APHP</h3>
+            <p>Leadership médical d'excellence au sein de l'Assistance Publique - Hôpitaux de Paris, garantissant une rigueur scientifique irréprochable.</p>
+        </div>
+        <div style="background:var(--f8fafc); padding:30px; border-radius:12px;">
+            <h3>Expertise Haut Niveau</h3>
+            <p>Accompagnement de sportifs de haut niveau et cadres dirigeants soumis à une pression extrême.</p>
         </div>
     </div>
-</div>
+</section>
 
-<div class="container">
-    <section class="hero">
-        <img src="https://via.placeholder.com/300x400" alt="Dr Christophe Delong" class="hero-img">
-        <div class="hero-text">
-            <a href="https://fr.wikipedia.org/wiki/Christophe_Delong" target="_blank" class="badge-wiki">↗ Référencé sur Wikipedia</a>
-            <h2>Dr Christophe Delong</h2>
-            <p><strong>Médecin spécialiste, ancien praticien hospitalier (AP-HP).</strong></p>
-            <p>Expert reconnu en médecine physique et de réadaptation, le Dr Delong dirige l'architecture clinique de <strong>Kinexa</strong>. Ses travaux intègrent la boucle neuromotrice au cœur de l'innovation IA pour restaurer l'harmonie du geste.</p>
-        </div>
-    </section>
-
-    <blockquote>
-        "Le mouvement n'est pas une simple mécanique, c'est une symphonie neurologique que l'IA nous permet aujourd'hui de décoder avec une précision inédite."
-    </blockquote>
-
-    <div class="content-split">
+<section class="services">
+    <div style="text-align:center; margin-bottom:50px;">
+        <p style="color:var(--blue-light); font-weight:bold;">SOLUTIONS CORPORATE</p>
+        <h2>Nos Domaines d'Expertise</h2>
+    </div>
+    <div class="grid">
         <div class="card">
-            <h3>L'Ouvrage de Référence</h3>
-            <p>Retrouvez les fondements cliniques dans mon ouvrage publié chez <strong>Flammarion</strong>.</p>
-            <p><em>Une base doctrinale pour les professionnels de santé exigeants.</em></p>
-            <a href="#" class="btn">Consulter le livre</a>
+            <h3>Masterclass Flash</h3>
+            <p>Format 45 minutes. Impact immédiat. Protocoles actionnables pour la récupération neuronale.</p>
         </div>
-
+        <div class="card" style="border-top: 4px solid var(--accent);">
+            <h3>Modules Neuro-IA</h3>
+            <p>Programme complet. Adaptation du cerveau aux outils d'IA et résilience cognitive.</p>
+        </div>
         <div class="card">
-            <h3>Guide Gratuit : IA & Neuroplasticité</h3>
-            <p>Téléchargez notre dernier Ebook pour comprendre l'impact des protocoles Kinexa sur la rééducation moderne.</p>
-            <form>
-                <input type="email" placeholder="Votre email professionnel" style="width:100%; padding:10px; margin-top:10px; border:1px solid #ddd; border-radius:4px;">
-                <button type="submit" class="btn" style="width:100%; border:none; cursor:pointer;">Recevoir l'Ebook</button>
-            </form>
+            <h3>Programmes Sur Mesure</h3>
+            <p>Optimisation des Codir et prévention du burnout. Adaptation totale à vos enjeux.</p>
         </div>
     </div>
-</div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Passez à l'étape suivante</h2>
+    <p>Échangeons sur vos enjeux de formation.</p>
+    <p style="font-size:1.5rem; font-weight:bold;">contact@formation.kinexa.ai</p>
+</section>
 
 <footer>
-    <p>&copy; 2026 Kinexa.ai - Biohacking & Neurosciences. Tous droits réservés.</p>
+    <p>KINEXA - 229 BOULEVARD PEREIRE 75017 PARIS | SIRET : 942261967 00015 | NDA : 11 75 74061 75</p>
+    <p>Ce site intègre les langages qui échappent au texte brut : le mouvement, l'harmonie et le silence.</p>
 </footer>
 
 </body>
